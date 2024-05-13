@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Social Media Dashboard</title>
-
-  
+  <title>Frontend Mentor | Social Media Dashboard</title> 
 
 </head>
+
 <body>
   <main class="main-container">
     <header>  
@@ -20,74 +21,189 @@
       </div>
       <div class="header-mode">
         <p>Dark Mode</p>
-        
+        <label>
+          <input type="checkbox" name="checkbox" id="checkbox">
+        </label>
       </div>
     </header>
+
+    <section class="cards">
+      <div class="card1">
+        <div class="cards-socialmedia">
+          <img src="images/icon-facebook.svg" alt="icon-facebook">
+          <a>@nathanf</a>
+        </div>
+        <div class="cards-followers">
+          <span>1987</span>
+          <p>FOLLOWERS</p>
+        </div>
+        <div class="cards-variance">
+          <img src="images/icon-up.svg" alt="icon-up">
+          <p>12 Today</p>
+        </div>
+      </div>
+
+      <div class="card2">
+        <div class="cards-socialmedia">
+          <img src="images/icon-twitter.svg" alt="icon-twitter">
+          <a>@nathanf</a>
+        </div>
+        <div class="cards-followers">
+          <span>1044</span>
+          <p>FOLLOWERS</p>
+        </div>
+        <div class="cards-variance">
+          <img src="images/icon-up.svg" alt="icon-up">
+          <p>99 Today</p>
+        </div>
+      </div>
+
+      <div class="card3">
+        <div class="cards-socialmedia">
+          <img src="images/icon-instagram.svg" alt="icon-instagram">
+          <a>@realnathanf</a>
+        </div>
+        <div class="cards-followers">
+          <span>11k</span>
+          <p>FOLLOWERS</p>
+        </div>
+        <div class="cards-variance">
+          <img src="images/icon-up.svg" alt="icon-up">
+          <p>1099 Today</p>
+        </div>
+      </div>
+
+      <div class="card4">
+        <div class="cards-socialmedia">
+          <img src="images/icon-youtube.svg" alt="icon-youtube">
+          <a>Nathan F.</a>
+        </div>
+        <div class="cards-followers">
+          <span>8239</span>
+          <p>FOLLOWERS</p>
+        </div>
+        <div class="cards-variance">
+          <img src="images/icon-down.svg" alt="icon-down">
+          <p>144 Today</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <h2>Overview - Today</h2>
+      <div class="overview1">
+        <div class="overview-socialmedia">
+          <p>Page Views</p>
+          <img src="images/icon-facebook.svg" alt="icon-facebook">
+        </div>
+        <div class="overview-numbers">
+            <span>87</span>
+            <div class="percentage">
+              <img src="images/icon-up.svg" alt="icon-up">
+              <p>3%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview2">
+        <div class="overview-socialmedia">
+          <p>Likes</p>
+          <img src="images/icon-facebook.svg" alt="icon-facebook">
+        </div>
+        <div class="overview-numbers">
+            <span>52</span>
+            <div class="percentage">
+              <img src="images/icon-down.svg" alt="icon-down">
+              <p>2%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview3">
+        <div class="overview-socialmedia">
+          <p>Likes</p>
+          <img src="images/icon-instagram.svg" alt="icon-instagram">
+        </div>
+        <div class="overview-numbers">
+            <span>5462</span>
+            <div class="percentage">
+              <img src="images/icon-up.svg" alt="icon-up">
+              <p>2257%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview4">
+        <div class="overview-socialmedia">
+          <p>Page Views</p>
+          <img src="images/icon-instagram.svg" alt="icon-instagram">
+        </div>
+        <div class="overview-numbers">
+            <span>52k</span>
+            <div class="percentage">
+              <img src="images/icon-up.svg" alt="icon-up">
+              <p>1375%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview5">
+        <div class="overview-socialmedia">
+          <p>Page Views</p>
+          <img src="images/icon-twitter.svg" alt="icon-twitter">
+        </div>
+        <div class="overview-numbers">
+            <span>117</span>
+            <div class="percentage">
+              <img src="images/icon-up.svg" alt="icon-up">
+              <p>553%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview6">
+        <div class="overview-socialmedia">
+          <p>Page Views</p>
+          <img src="images/icon-twitter.svg" alt="icon-twitter">
+        </div>
+        <div class="overview-numbers">
+            <span>87</span>
+            <div class="percentage">
+              <img src="images/icon-up.svg" alt="icon-up">
+              <p>3%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview7">
+        <div class="overview-socialmedia">
+          <p>Page Views</p>
+          <img src="images/icon-youtube.svg" alt="icon-youtube">
+        </div>
+        <div class="overview-numbers">
+            <span>107</span>
+            <div class="percentage">
+              <img src="images/icon-down.svg" alt="icon-down">
+              <p>19%</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="overview8">
+        <div class="overview-socialmedia">
+          <p>Page Views</p>
+          <img src="images/icon-youtube.svg" alt="icon-youtube">
+        </div>
+        <div class="overview-numbers">
+            <span>1407</span>
+            <div class="percentage">
+              <img src="images/icon-down.svg" alt="icon-down">
+              <p>12%</p>
+            </div>
+        </div>
+      </div>
+    </section>
   </main>
-  
-
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
