@@ -5,16 +5,14 @@
     --BrightRed: hsl(356, 69%, 56%);
     --Facebook: hsl(208, 92%, 53%);
     --Twitter: hsl(203, 89%, 53%);
-    --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --Instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --YouTube: hsl(348, 97%, 39%);
-    
-    /* Dark Theme */
-    --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
     
     /* Light Theme */
     --Toggle: hsl(230, 22%, 74%);
     
     /* Light Theme  */
+    --HOVER: hsl(230, 25%, 91%);
     --BG: hsl(0, 0%, 100%);
     --TOPBG: hsl(225, 100%, 98%);
     --CARDBG: hsl(227, 47%, 96%);
@@ -28,20 +26,262 @@
     padding: 0;
 }
 
-.darkMode {
+.darkmode {
+    --HOVER: hsl(229, 28%, 24%);
     --BG: hsl(230, 17%, 14%);
     --TOPBG: hsl(232, 19%, 15%);
     --CARDBG: hsl(228, 28%, 20%);
     --LightTEXT: hsl(228, 34%, 66%);
     --TEXT: hsl(0, 0%, 100%);
+    --Toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
+
 
 
 body {
     display: grid;
     place-content: center;
     min-height: 100vh;
+    
+    background: var(--BG);
+    color: var(--LightTEXT);
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
+}
+
+
+.background-top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    background: var(--TOPBG);
+    border-radius: 0 0 1rem 1rem;
+    z-index: -1;
+}
+
+
+.main-container {
+    display:grid;
+    place-content: center;
+    gap: 3rem;
+    max-width: 70rem;
+    margin-inline: 1rem;
+}
+
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border-bottom: 1px solid var(--TEXT);
+    padding: 1rem 0;
+    h1 {
+        color: var(--TEXT);
+    }
+    p {
+        font-weight: 700;
+    }
+}
+
+.header-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    p {
+        font-weight: 700;
+    }
+}
+
+
+label {
+    width: 50px;
+    height: 25px;
+    position: relative;
+    display: block;
+    background: var(--Toggle);
+    border-radius: 200px;
+    cursor: pointer;
+    
+}
+
+label:after {
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    /* It starts on the left */
+    bottom: 3px;
+    right: 2px;
+    background: var(--BG);
+    border-radius: 50%;
+    transition: 300ms;
+}
+
+label:hover {
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    transition: 500ms;
+}
+
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked + label:after {
+    right: 28px; /* 50px (label width) - 20px (label:after width) - 2px (margin) */
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23,57rem, 1fr));
+    gap:1rem;
+}
+
+.cards > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+    border-radius: .2rem;
+    background: var(--CARDBG);
+}
+
+.cards > div:first-child {
+    border-top: .2rem solid var(--Facebook);
+}
+.cards > div:nth-child(2) {
+    border-top: .2rem solid var(--Twitter);
+}
+.cards > div:nth-child(3) {
+    border-top: .2rem solid var(--Instagram);
+}
+.cards > div:last-child {
+    border-top: .2rem solid var(--YouTube);
+}
+
+.cards > div:hover {
+    background: var(--HOVER);
+    transition: 200ms;
+}
+
+
+.cards-socialmedia {
+    display: flex;
+    gap: .5rem;
+
+    a {
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.cards-followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+
+    span {
+        font-size: 3.5rem;
+        color: var(--TEXT);
+        font-weight: 700;
+    }
+
+    p {
+        letter-spacing: .3rem;
+    }
+}
+
+
+.cards-variance {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    /* Default color */
+    p {
+        color: var(--LimeGreen);
+        font-weight: 700;
+    }
+    /* If the icon is "down", change to red */
+    img[src$="icon-down.svg"] + p {
+        color: var(--BrightRed); 
+    }
+}
+
+
+h2 {
+    color: var(--LightTEXT);
+    font-weight: 700;
+}
+
+.overview {
+    display: grid;
+    gap: 1rem;
+}
+
+.overview > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: var(--CARDBG);
+    border-radius: .2rem;
+    padding: 1rem;
+}
+
+.overview > div:hover {
+    background: var(--HOVER);
+    transition: 200ms;
+}
+
+
+.overview-socialmedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    p {
+        color: var(--LightTEXT);
+        font-weight: 700;
+    }
+}
+
+
+.overview-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    span {
+        font-size: 2rem;
+        color: var(--TEXT);
+        font-weight: 700;
+    }
+}
+
+
+.percentage {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    p {
+        color: var(--LimeGreen);
+        font-weight: 700;
+    }
+
+    img[src$="icon-down.svg"] + p {
+        color: var(--BrightRed); 
+    }
 }
